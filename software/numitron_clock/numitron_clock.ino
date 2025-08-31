@@ -1,9 +1,8 @@
 #include "RTClib.h"
 #include <WiFi.h>
 #include "time.h"
+#include "secrets.h"
 
-#define WIFI_SSID "FRITZ!Powerline 1260E"
-#define WIFI_PASSWORD "35096468227977348450"
 #define NTP_SERVER "pool.ntp.org"
 #define TIMEZONE "CET-1CEST,M3.5.0/2,M10.5.0/3"
 
