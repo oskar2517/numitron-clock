@@ -3,6 +3,8 @@
 #include "time.h"
 #include "secrets.h"
 
+#define TUBES_COUNT 4
+
 #define NTP_SERVER "pool.ntp.org"
 #define TIMEZONE "CET-1CEST,M3.5.0/2,M10.5.0/3"
 
@@ -59,7 +61,7 @@ void displayDigit(int digit, bool decimalPoint) {
 }
 
 void displayNumber(int number, bool decimalPoint) {
-  for (int i = 0; i < 4; i++) {
+  for (int i = 0; i < TUBES_COUNT; i++) {
     int digit = number % 10; 
     displayDigit(digit, decimalPoint);
     number /= 10; 
