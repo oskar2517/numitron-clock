@@ -32,7 +32,7 @@ uint8_t segments[] = {
 
 void pulse(int pin) {
   digitalWrite(pin, LOW);
-  delay(5);
+  delayMicroseconds(5);
   digitalWrite(pin, HIGH);
 }
 
