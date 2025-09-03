@@ -139,17 +139,16 @@ void setup(void) {
     delay(10);
   }
 
-  fetchTimeFromNtp();
-
   if (!rtc.isrunning()) {
     rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+    fetchTimeFromNtp();
   }
 }
 
 void loop(void) {
   static int counter = 0;
   counter++;
-  if (counter % (2 * 60 * 30) == 0) {
+  if (counter != 0 && counter % (2 * 60 * 30) == 0) {
     fetchTimeFromNtp();
   }
 
