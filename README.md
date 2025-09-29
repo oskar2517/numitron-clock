@@ -27,6 +27,8 @@ The Gerber and BOM files are located in the root directory of this repository. T
 
 The BOM (Bill of Materials) file lists all the components needed to assemble this clock. Additionally, you will need four 9-pin Noval sockets for PCB mounting, which are inexpensive and readily available on platforms like AliExpress. I recommend choosing the plastic versions over ceramic ones, as the ceramic sockets tend to be a very tight fit and could risk damaging the tube's seals.
 
+`BOM_LCSC.xls` additionally includes links to the exact components I used.
+
 ## Configuring the Software
 
 Currently, the clock's software is still fairly limited, and all configuration options have to be set at compile time.
