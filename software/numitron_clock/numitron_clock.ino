@@ -8,9 +8,10 @@
 #define NTP_SERVER "pool.ntp.org"
 #define TIMEZONE "CET-1CEST,M3.5.0/2,M10.5.0/3"
 
-#define PIN_SERIAL 0   
+#define PIN_SERIAL 0
+#define PIN_ENABLE 1
 #define PIN_LATCH 2  
-#define PIN_SHIFT 1  
+#define PIN_SHIFT 3  
 #define PIN_RESET 6
 
 #define DECIMAL_POINT(d) ((d) | 0b00000001)
@@ -129,9 +130,12 @@ void setup(void) {
   Serial.begin(9600);
 
   pinMode(PIN_SERIAL, OUTPUT);
+  pinMode(PIN_ENABLE, OUTPUT);
   pinMode(PIN_LATCH, OUTPUT);
   pinMode(PIN_SHIFT, OUTPUT);
   pinMode(PIN_RESET, OUTPUT);
+
+  digitalWrite(PIN_ENABLE, LOW);
 
   pulse(PIN_RESET);
 
